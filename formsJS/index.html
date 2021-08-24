@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exem Forms JS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <form method="GET" id="form1">
+      <h3>Register form</h3>
+      <label>
+        <span class="label__title">Username:</span>
+        <input type="text" id="username" required>
+        <p style="margin-right: 5px;" id="usernameMsg1">Username 'admin' or 'user' or 'test' is not allow.</p>
+        <p id="usernameMsg2">Username is incorrect: length from 4 to 20 and your username can consist symbols like: _ -
+        </p>
+      </label>
+      <label>
+        <span class="label__title">Email:</span>
+        <input type="email" id="email" required>
+        <p id="emailMsg">Enter a valid email address</p>
+      </label>
+      <label>
+        <span class="label__title">Password:</span>
+        <input type="password" id="password" required>
+        <p id="passwordMsg">Min length is 6 characters and has no space</p>
+      </label>
+      <label>
+        <span class="label__title">Repeat:</span>
+        <input type="password" id="repeat" required>
+        <p id="repeatMsg">The passwords must match</p>
+      </label>
+      <input type="submit" value="Register">
+    </form>
+
+    <div class="table__box">
+      <h3>Result</h3>
+      <table>
+        <tr>
+          <td>Username</td>
+          <td id="usernameRes">empty</td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td id="emailRes">empty</td>
+        </tr>
+        <tr>
+          <td>Password</td>
+          <td id="passwordRes">empty</td>
+        </tr>
+      </table>
+    </div>
+
+    <form method="GET" id="form2">
+      <h3>User info</h3>
+      <label>
+        <span class="label__title">Full name:</span>
+        <input type="text" id="fullname" required>
+        <p style="margin-right: 5px;" id="fullnameMsg1">Full name may only contain letters, spaces, and dashes.</p>
+        <p id="fullnameMsg2">Full name is incorrect: length from 2 to 50</p>
+      </label>
+      <label>
+        <span class="label__title">Avatar:</span>
+        <input type="file" id="avatar">
+        <p id="avatarMsg">Avatar is required</p>
+      </label>
+      <label>
+        <span class="label__title">Birthday:</span>
+        <input type="date" id="date" required>
+        <p id="dateMsg">Min birthday is 01/01/1900</p>
+      </label>
+      <label class="label__gender">
+        <span class="label__title">Gender:</span>
+        <div style="max-width: 300px; width: 100%;">
+          <input type="radio" name="gender" id="gender1" value="male"><span class="gender">Male</span>
+          <input type="radio" name="gender" id="gender2" value="female"><span class="gender">Female</span>
+        </div>
+        <p id="genderMsg">Gender is required</p>
+      </label>
+      <label class="label__subscribe">
+        <span class="label__title">Subscribe:</span>
+        <input type="checkbox" id="subscribe">
+      </label>
+      <input type="submit" value="Save">
+    </form>
+
+    <div class="table__box">
+      <h3>Result</h3>
+      <table>
+        <tr>
+          <td>Full name</td>
+          <td id="fullnameRes">empty</td>
+        </tr>
+        <tr>
+          <td>Avatar</td>
+          <td id="avatarRes">empty</td>
+        </tr>
+        <tr>
+          <td>Birthday</td>
+          <td id="dateRes">empty</td>
+        </tr>
+        <tr>
+          <td>Gender</td>
+          <td id="genderRes">empty</td>
+        </tr>
+        <tr>
+          <td>Subscribe</td>
+          <td id="subscribeRes">empty</td>
+        </tr>
+      </table>
+    </div>
+    </div>
+    
+
+  </main>
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
